@@ -12,6 +12,7 @@ var app = express();
 //connections to database
 var {db} = require('./localServer')
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
