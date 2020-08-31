@@ -1,0 +1,67 @@
+<% include partials/header %>
+<div class="container-fluid">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-sm-6 ">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h1 class="text-white">Updating <%= candidate.name %> Vote Share Per Polling Point </h1>
+                </div>
+                <div class="card-body">
+                    <form action="/updatecandidate/<%= candidate._id %> " method="post">
+                        <div class="form-group">
+                            <label for="name">Candidate</label>
+                            <input id="name" class="form-control" type="text" name="name" placeholder="Candidates Name" value="<%= candidate.name %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="poll1">Polling Point 1</label>
+                            <input id="poll1" class="form-control" type="number" name="poll1" value=<%= candidate.poll1 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll2">Polling Point 2</label>
+                            <input id="poll2" class="form-control" type="number" name="poll2" value=<%= candidate.poll2 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll3">Polling Point 3</label>
+                            <input id="poll3" class="form-control" type="number" name="poll3" value=<%= candidate.poll3 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll4">Polling Point 4</label>
+                            <input id="poll4" class="form-control" type="number" name="poll4" value=<%= candidate.poll4 %> >
+                        </div>
+                        <div class="form-group">
+                            <label for="poll5">Polling Point 5</label>
+                            <input id="poll5" class="form-control" type="number" name="poll5" value=<%= candidate.poll5 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll6">Polling Point 6</label>
+                            <input id="poll6" class="form-control" type="number" name="poll6" value=<%= candidate.poll6 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll7">Polling Point 7</label>
+                            <input id="poll7" class="form-control" type="number" name="poll7" value=<%= candidate.poll7 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll8">Polling Point 8</label>
+                            <input id="poll8" class="form-control" type="number" name="poll8" value=<%= candidate.poll8 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll9">Polling Point 9</label>
+                            <input id="poll9" class="form-control" type="number" name="poll9" value=<%= candidate.poll9 %>>
+                        </div>
+                        <div class="form-group">
+                            <label for="poll10">Polling Point 10</label>
+                            <input id="poll10" class="form-control" type="number" name="poll10" value=<%= candidate.poll10 %>>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <input type="submit" value="Submit" class="btn btn-info">
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer %>

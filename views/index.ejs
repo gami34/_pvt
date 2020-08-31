@@ -1,6 +1,67 @@
 <% include partials/header %>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <table class="table table-info table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Candidate</th>
+                <th> Poll1</th>
+                <th> Poll2</th>
+                <th> Poll3</th>
+                <th> Poll4</th>
+                <th> Poll5</th>
+                <th> Poll6</th>
+                <th> Poll7</th>
+                <th> Poll8</th>
+                <th> Poll9</th>
+                <th> Poll10</th>
+                <th> Edit Values</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% candidates.forEach(candidate => { %>
+                <tr>
+                    <td><strong><a href="/readcandidate/<%= candidate._id %>" class="text-secondary"><%= candidate.name %> </a></strong></td>
+                    <td><%= candidate.poll1 %></td>
+                    <td><%= candidate.poll2 %></td>
+                    <td><%= candidate.poll3 %></td>
+                    <td><%= candidate.poll4 %></td>
+                    <td><%= candidate.poll5 %></td>
+                    <td><%= candidate.poll6 %></td>
+                    <td><%= candidate.poll7 %></td>
+                    <td><%= candidate.poll8 %></td>
+                    <td><%= candidate.poll9 %></td>
+                    <td><%= candidate.poll10 %></td>
+                    <td><% include partials/addchange %></td>
+
+                </tr>
+            <% }) %>
+                 <tr>
+                    
+                </tr>
+        </tbody>
+    </table>
+    <h4 class="display-4">Proposed Solution (Dwelli.ng Tech Chanlledge)</h4>
+    <table class="table table-info table-striped ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Candidate</th>
+                <th> Vote Share (%)</th>
+                <th> Margin Error (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% solutions.forEach(solution => { %>
+                <tr>
+                    <td><strong><%= solution.name %> </strong></td>
+                    <td><%= solution.vote_share.toFixed(2) %> %</td>
+                    <td>+- <%= solution.margin_error.toFixed(2) %> %</td>
+
+                </tr>
+            <% }) %>
+                 <tr>
+                    
+                </tr>
+        </tbody>
+    </table>
 
 <% include partials/footer %>

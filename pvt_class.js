@@ -12,7 +12,6 @@ class Pvt {
         // console.log(this.sum_mi())
         // console.log(this.mi.slice(1).length)
         this.mi_mul = this.mi_mul.bind(this)
-        console.log(this.vote_share('bob'))
         
     }
 }

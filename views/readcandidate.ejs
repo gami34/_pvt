@@ -1,0 +1,33 @@
+<% include partials/header %>
+<div class="container-fluid">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-sm-6 ">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h1 class="text-white"><%= candidate.name %>'s Vote Share </h1>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 1:  <%= candidate.name %></a>
+                        <a href="#" class="list-group-item list-group-item-action">Polling Point 2:  <%= candidate.poll2 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 3:  <%= candidate.poll3 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 4:  <%= candidate.poll4 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 5:  <%= candidate.poll5 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 6:  <%= candidate.poll6 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 7:  <%= candidate.poll7 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 8:  <%= candidate.poll8 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 9:  <%= candidate.poll9 %></a>
+                        <a href="#" class="list-group-item list-group-item-action ">Polling Point 10: <%= candidate.poll10 %></a>
+                    </div>
+                    <div class="d-flex justify-content-end p-4">
+                        <a href="/updatecandidate/<%= candidate._id %>" class="btn btn-info btn-sm">Edit</a>
+                        <a href="#" data-id="<%= candidate._id %>" class="btn btn-info btn-sm delete-candidate ml-3">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer %>
