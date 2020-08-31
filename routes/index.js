@@ -45,7 +45,6 @@ router.get('/', function(req, res, next) {
           let vs = poll.vote_share(key)
           let me = poll.margin_error(key)
           
-          console.log('weorkint1')
           solution.name = key
           solution.vote_share = vs
           solution.margin_error = me
